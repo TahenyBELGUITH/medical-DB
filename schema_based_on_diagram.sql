@@ -33,11 +33,7 @@ CREATE table invoice_items(
  unit_price  decimal,
  quantity INT,
  total_price decimal,
- invoices_id INT REFERENCES invoice(invoice_id)
+ invoices_id INT REFERENCES invoice(invoice_id),
  treatment_id INT REFERENCES treatments(treatments_id),
 )
 
--- ======== FK Indexes ==========
-CREATE INDEX ON visits (animals_id);
-CREATE INDEX ON visits (vets_id);
-CREATE INDEX ON owners (email);
